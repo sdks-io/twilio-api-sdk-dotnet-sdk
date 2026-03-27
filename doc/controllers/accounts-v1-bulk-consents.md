@@ -24,7 +24,7 @@ CreateBulkConsentsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1BulkConsents](../../doc/models/accounts-v1-bulk-consents.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.BulkConsents](../../doc/models/bulk-consents.md).
 
 ## Example Usage
 
@@ -37,7 +37,7 @@ List<object> items = new List<object>
 
 try
 {
-    ApiResponse<AccountsV1BulkConsents> result = await accountsV1BulkConsentsApi.CreateBulkConsentsAsync(items);
+    ApiResponse<BulkConsents> result = await accountsV1BulkConsentsApi.CreateBulkConsentsAsync(items);
 }
 catch (ApiException e)
 {

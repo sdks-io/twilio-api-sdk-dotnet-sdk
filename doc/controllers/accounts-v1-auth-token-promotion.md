@@ -19,14 +19,14 @@ UpdateAuthTokenPromotionAsync()
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1AuthTokenPromotion](../../doc/models/accounts-v1-auth-token-promotion.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AuthTokenPromotion](../../doc/models/auth-token-promotion.md).
 
 ## Example Usage
 
 ```csharp
 try
 {
-    ApiResponse<AccountsV1AuthTokenPromotion> result = await accountsV1AuthTokenPromotionApi.UpdateAuthTokenPromotionAsync();
+    ApiResponse<AuthTokenPromotion> result = await accountsV1AuthTokenPromotionApi.UpdateAuthTokenPromotionAsync();
 }
 catch (ApiException e)
 {

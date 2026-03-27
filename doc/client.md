@@ -5,6 +5,7 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
+| Environment | [`Environment`](../README.md#environments) | The API environment. <br> **Default: `Environment.Production`** |
 | Timeout | `TimeSpan` | Http client timeout.<br>*Default*: `TimeSpan.FromSeconds(30)` |
 | HttpClientConfiguration | [`Action<HttpClientConfiguration.Builder>`](../doc/http-client-configuration-builder.md) | Action delegate that configures the HTTP client by using the HttpClientConfiguration.Builder for customizing API call settings.<br>*Default*: `new HttpClient()` |
 | LogBuilder | [`LogBuilder`](../doc/log-builder.md) | Represents the logging configuration builder for API calls |
@@ -16,12 +17,12 @@ The API client can be initialized as follows:
 
 ```csharp
 using Microsoft.Extensions.Logging;
-using TwilioAccounts.Standard;
-using TwilioAccounts.Standard.Authentication;
+using TwilioApIs.Standard;
+using TwilioApIs.Standard.Authentication;
 
 namespace ConsoleApp;
 
-TwilioAccountsClient client = new TwilioAccountsClient.Builder()
+TwilioApIsClient client = new TwilioApIsClient.Builder()
     .BasicAuthCredentials(
         new BasicAuthModel.Builder(
             "BasicAuthUserName",
@@ -30,6 +31,7 @@ TwilioAccountsClient client = new TwilioAccountsClient.Builder()
         .Build())
     .HttpClientConfig(httpClientConfig =>
         httpClientConfig.Timeout(TimeSpan.FromSeconds(100)))
+    .Environment(TwilioApIs.Standard.Environment.Production)
     .LoggingConfig(config => config
         .LogLevel(LogLevel.Information)
         .RequestConfig(reqConfig => reqConfig.Body(true))
@@ -41,7 +43,7 @@ TwilioAccountsClient client = new TwilioAccountsClient.Builder()
 ## Configuration-Based Initialization
 
 ```csharp
-using TwilioAccounts.Standard;
+using TwilioApIs.Standard;
 using Microsoft.Extensions.Configuration;
 
 namespace ConsoleApp;
@@ -53,13 +55,13 @@ var configuration = new ConfigurationBuilder()
     .Build();
 
 // Instantiate your SDK and configure it from IConfiguration
-var client = TwilioAccountsClient
-    .FromConfiguration(configuration.GetSection("TwilioAccounts"));
+var client = TwilioApIsClient
+    .FromConfiguration(configuration.GetSection("TwilioApIs"));
 ```
 
 See the [Configuration-Based Initialization](../doc/configuration-based-initialization.md) section for details.
 
-## Twilio - AccountsClient Class
+## Twilio APIsClient Class
 
 The gateway for the SDK. This class acts as a factory for the Apis and also holds the configuration of the SDK.
 
@@ -75,6 +77,56 @@ The gateway for the SDK. This class acts as a factory for the Apis and also hold
 | AccountsV1PublicKeyApi | Gets AccountsV1PublicKeyApi. |
 | AccountsV1SafelistApi | Gets AccountsV1SafelistApi. |
 | AccountsV1SecondaryAuthTokenApi | Gets AccountsV1SecondaryAuthTokenApi. |
+| ChatV3ChannelApi | Gets ChatV3ChannelApi. |
+| ConversationsV1AddressConfigurationApi | Gets ConversationsV1AddressConfigurationApi. |
+| ConversationsV1BindingApi | Gets ConversationsV1BindingApi. |
+| ConversationsV1ConfigurationApi | Gets ConversationsV1ConfigurationApi. |
+| ConversationsV1ConversationApi | Gets ConversationsV1ConversationApi. |
+| ConversationsV1ConversationWithParticipantsApi | Gets ConversationsV1ConversationWithParticipantsApi. |
+| ConversationsV1CredentialApi | Gets ConversationsV1CredentialApi. |
+| ConversationsV1DeliveryReceiptApi | Gets ConversationsV1DeliveryReceiptApi. |
+| ConversationsV1MessageApi | Gets ConversationsV1MessageApi. |
+| ConversationsV1NotificationApi | Gets ConversationsV1NotificationApi. |
+| ConversationsV1ParticipantApi | Gets ConversationsV1ParticipantApi. |
+| ConversationsV1ParticipantConversationApi | Gets ConversationsV1ParticipantConversationApi. |
+| ConversationsV1RoleApi | Gets ConversationsV1RoleApi. |
+| ConversationsV1ServiceApi | Gets ConversationsV1ServiceApi. |
+| ConversationsV1UserApi | Gets ConversationsV1UserApi. |
+| ConversationsV1UserConversationApi | Gets ConversationsV1UserConversationApi. |
+| ConversationsV1WebhookApi | Gets ConversationsV1WebhookApi. |
+| NotifyV1BindingApi | Gets NotifyV1BindingApi. |
+| NotifyV1CredentialApi | Gets NotifyV1CredentialApi. |
+| NotifyV1NotificationApi | Gets NotifyV1NotificationApi. |
+| NotifyV1ServiceApi | Gets NotifyV1ServiceApi. |
+| TaskrouterV1ActivityApi | Gets TaskrouterV1ActivityApi. |
+| TaskrouterV1EventApi | Gets TaskrouterV1EventApi. |
+| TaskrouterV1TaskApi | Gets TaskrouterV1TaskApi. |
+| TaskrouterV1TaskChannelApi | Gets TaskrouterV1TaskChannelApi. |
+| TaskrouterV1TaskQueueApi | Gets TaskrouterV1TaskQueueApi. |
+| TaskrouterV1TaskQueueBulkRealTimeStatisticsApi | Gets TaskrouterV1TaskQueueBulkRealTimeStatisticsApi. |
+| TaskrouterV1TaskQueueCumulativeStatisticsApi | Gets TaskrouterV1TaskQueueCumulativeStatisticsApi. |
+| TaskrouterV1TaskQueueRealTimeStatisticsApi | Gets TaskrouterV1TaskQueueRealTimeStatisticsApi. |
+| TaskrouterV1TaskQueueStatisticsApi | Gets TaskrouterV1TaskQueueStatisticsApi. |
+| TaskrouterV1TaskQueuesStatisticsApi | Gets TaskrouterV1TaskQueuesStatisticsApi. |
+| TaskrouterV1TaskReservationApi | Gets TaskrouterV1TaskReservationApi. |
+| TaskrouterV1WorkerApi | Gets TaskrouterV1WorkerApi. |
+| TaskrouterV1WorkerChannelApi | Gets TaskrouterV1WorkerChannelApi. |
+| TaskrouterV1WorkerReservationApi | Gets TaskrouterV1WorkerReservationApi. |
+| TaskrouterV1WorkerStatisticsApi | Gets TaskrouterV1WorkerStatisticsApi. |
+| TaskrouterV1WorkersCumulativeStatisticsApi | Gets TaskrouterV1WorkersCumulativeStatisticsApi. |
+| TaskrouterV1WorkersRealTimeStatisticsApi | Gets TaskrouterV1WorkersRealTimeStatisticsApi. |
+| TaskrouterV1WorkersStatisticsApi | Gets TaskrouterV1WorkersStatisticsApi. |
+| TaskrouterV1WorkflowApi | Gets TaskrouterV1WorkflowApi. |
+| TaskrouterV1WorkflowCumulativeStatisticsApi | Gets TaskrouterV1WorkflowCumulativeStatisticsApi. |
+| TaskrouterV1WorkflowRealTimeStatisticsApi | Gets TaskrouterV1WorkflowRealTimeStatisticsApi. |
+| TaskrouterV1WorkflowStatisticsApi | Gets TaskrouterV1WorkflowStatisticsApi. |
+| TaskrouterV1WorkspaceApi | Gets TaskrouterV1WorkspaceApi. |
+| TaskrouterV1WorkspaceCumulativeStatisticsApi | Gets TaskrouterV1WorkspaceCumulativeStatisticsApi. |
+| TaskrouterV1WorkspaceRealTimeStatisticsApi | Gets TaskrouterV1WorkspaceRealTimeStatisticsApi. |
+| TaskrouterV1WorkspaceStatisticsApi | Gets TaskrouterV1WorkspaceStatisticsApi. |
+| VerifyV2ServiceApi | Gets VerifyV2ServiceApi. |
+| VerifyV2VerificationApi | Gets VerifyV2VerificationApi. |
+| VerifyV2VerificationCheckApi | Gets VerifyV2VerificationCheckApi. |
 
 ### Properties
 
@@ -90,11 +142,11 @@ The gateway for the SDK. This class acts as a factory for the Apis and also hold
 | Name | Description | Return Type |
 |  --- | --- | --- |
 | `GetBaseUri(Server alias = Server.Default)` | Gets the URL for a particular alias in the current environment and appends it with template parameters. | `string` |
-| `ToBuilder()` | Creates an object of the Twilio - AccountsClient using the values provided for the builder. | `Builder` |
+| `ToBuilder()` | Creates an object of the Twilio APIsClient using the values provided for the builder. | `Builder` |
 
-## Twilio - AccountsClient Builder Class
+## Twilio APIsClient Builder Class
 
-Class to build instances of Twilio - AccountsClient.
+Class to build instances of Twilio APIsClient.
 
 ### Methods
 

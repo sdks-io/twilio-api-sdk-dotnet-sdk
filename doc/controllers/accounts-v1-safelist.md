@@ -32,7 +32,7 @@ CreateSafelistAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1Safelist](../../doc/models/accounts-v1-safelist.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.Safelist](../../doc/models/safelist.md).
 
 ## Example Usage
 
@@ -40,7 +40,7 @@ This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The 
 string phoneNumber = "+18001234567";
 try
 {
-    ApiResponse<AccountsV1Safelist> result = await accountsV1SafelistApi.CreateSafelistAsync(phoneNumber);
+    ApiResponse<Safelist> result = await accountsV1SafelistApi.CreateSafelistAsync(phoneNumber);
 }
 catch (ApiException e)
 {
@@ -75,7 +75,7 @@ FetchSafelistAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1Safelist](../../doc/models/accounts-v1-safelist.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.Safelist](../../doc/models/safelist.md).
 
 ## Example Usage
 
@@ -83,7 +83,7 @@ This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The 
 string phoneNumber = "+18001234567";
 try
 {
-    ApiResponse<AccountsV1Safelist> result = await accountsV1SafelistApi.FetchSafelistAsync(phoneNumber);
+    ApiResponse<Safelist> result = await accountsV1SafelistApi.FetchSafelistAsync(phoneNumber);
 }
 catch (ApiException e)
 {

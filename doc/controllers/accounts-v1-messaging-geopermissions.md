@@ -31,7 +31,7 @@ UpdateMessagingGeopermissionsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1MessagingGeopermissions](../../doc/models/accounts-v1-messaging-geopermissions.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.MsgGeopermissions](../../doc/models/msg-geopermissions.md).
 
 ## Example Usage
 
@@ -44,7 +44,7 @@ List<object> permissions = new List<object>
 
 try
 {
-    ApiResponse<AccountsV1MessagingGeopermissions> result = await accountsV1MessagingGeopermissionsApi.UpdateMessagingGeopermissionsAsync(permissions);
+    ApiResponse<MsgGeopermissions> result = await accountsV1MessagingGeopermissionsApi.UpdateMessagingGeopermissionsAsync(permissions);
 }
 catch (ApiException e)
 {
@@ -70,7 +70,7 @@ FetchMessagingGeopermissionsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1MessagingGeopermissions](../../doc/models/accounts-v1-messaging-geopermissions.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.MsgGeopermissions](../../doc/models/msg-geopermissions.md).
 
 ## Example Usage
 
@@ -78,7 +78,7 @@ This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The 
 string countryCode = "IN,PK,US";
 try
 {
-    ApiResponse<AccountsV1MessagingGeopermissions> result = await accountsV1MessagingGeopermissionsApi.FetchMessagingGeopermissionsAsync(countryCode);
+    ApiResponse<MsgGeopermissions> result = await accountsV1MessagingGeopermissionsApi.FetchMessagingGeopermissionsAsync(countryCode);
 }
 catch (ApiException e)
 {

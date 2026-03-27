@@ -23,12 +23,12 @@ Documentation for accessing and setting credentials for accountSid_authToken.
 You must provide credentials in the client as shown in the following code snippet.
 
 ```csharp
-using TwilioAccounts.Standard;
-using TwilioAccounts.Standard.Authentication;
+using TwilioApIs.Standard;
+using TwilioApIs.Standard.Authentication;
 
 namespace ConsoleApp;
 
-TwilioAccountsClient client = new TwilioAccountsClient.Builder()
+TwilioApIsClient client = new TwilioApIsClient.Builder()
     .BasicAuthCredentials(
         new BasicAuthModel.Builder(
             "BasicAuthUserName",

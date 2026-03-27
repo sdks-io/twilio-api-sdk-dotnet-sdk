@@ -11,7 +11,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `Credentials` | [`List<AccountsV1CredentialCredentialAws>`](../../doc/models/accounts-v1-credential-credential-aws.md) | Optional | - |
+| `Credentials` | [`List<CredentialAws>`](../../doc/models/credential-aws.md) | Optional | - |
 | `Meta` | [`Meta`](../../doc/models/meta.md) | Optional | - |
 | `AdditionalProperties` | `object this[string key]` | Optional | - |
 

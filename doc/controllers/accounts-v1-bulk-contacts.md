@@ -24,7 +24,7 @@ CreateBulkContactsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1BulkContacts](../../doc/models/accounts-v1-bulk-contacts.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.BulkContacts](../../doc/models/bulk-contacts.md).
 
 ## Example Usage
 
@@ -37,7 +37,7 @@ List<object> items = new List<object>
 
 try
 {
-    ApiResponse<AccountsV1BulkContacts> result = await accountsV1BulkContactsApi.CreateBulkContactsAsync(items);
+    ApiResponse<BulkContacts> result = await accountsV1BulkContactsApi.CreateBulkContactsAsync(items);
 }
 catch (ApiException e)
 {

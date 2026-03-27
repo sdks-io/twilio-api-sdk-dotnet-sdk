@@ -11,7 +11,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `Credentials` | [`List<AccountsV1CredentialCredentialPublicKey>`](../../doc/models/accounts-v1-credential-credential-public-key.md) | Optional | - |
+| `Credentials` | [`List<CredentialPublicKey>`](../../doc/models/credential-public-key.md) | Optional | - |
 | `Meta` | [`Meta`](../../doc/models/meta.md) | Optional | - |
 | `AdditionalProperties` | `object this[string key]` | Optional | - |
 

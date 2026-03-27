@@ -24,14 +24,14 @@ CreateSecondaryAuthTokenAsync()
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1SecondaryAuthToken](../../doc/models/accounts-v1-secondary-auth-token.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.SecondaryAuthToken](../../doc/models/secondary-auth-token.md).
 
 ## Example Usage
 
 ```csharp
 try
 {
-    ApiResponse<AccountsV1SecondaryAuthToken> result = await accountsV1SecondaryAuthTokenApi.CreateSecondaryAuthTokenAsync();
+    ApiResponse<SecondaryAuthToken> result = await accountsV1SecondaryAuthTokenApi.CreateSecondaryAuthTokenAsync();
 }
 catch (ApiException e)
 {

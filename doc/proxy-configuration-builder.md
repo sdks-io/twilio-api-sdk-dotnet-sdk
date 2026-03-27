@@ -18,12 +18,12 @@ To configure the SDK to use a proxy server, initialize the proxy configuration d
 ## Usage Example
 
 ```csharp
-using TwilioAccounts.Standard;
-using TwilioAccounts.Standard.Http.Client.Proxy;
+using TwilioApIs.Standard;
+using TwilioApIs.Standard.Http.Client.Proxy;
 
 namespace ConsoleApp;
 
-var client = new TwilioAccountsClient.Builder()
+var client = new TwilioApIsClient.Builder()
 .HttpClientConfig(config => config
     .Proxy(new ProxyConfigurationBuilder("http://localhost")
             .Port(8080)

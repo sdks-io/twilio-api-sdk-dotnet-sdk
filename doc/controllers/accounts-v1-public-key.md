@@ -92,7 +92,7 @@ CreateCredentialPublicKeyAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1CredentialCredentialPublicKey](../../doc/models/accounts-v1-credential-credential-public-key.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.CredentialPublicKey](../../doc/models/credential-public-key.md).
 
 ## Example Usage
 
@@ -102,7 +102,7 @@ string friendlyName = "friendly_name";
 string accountSid = "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 try
 {
-    ApiResponse<AccountsV1CredentialCredentialPublicKey> result = await accountsV1PublicKeyApi.CreateCredentialPublicKeyAsync(
+    ApiResponse<CredentialPublicKey> result = await accountsV1PublicKeyApi.CreateCredentialPublicKeyAsync(
         publicKey,
         friendlyName,
         accountSid
@@ -145,7 +145,7 @@ FetchCredentialPublicKeyAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1CredentialCredentialPublicKey](../../doc/models/accounts-v1-credential-credential-public-key.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.CredentialPublicKey](../../doc/models/credential-public-key.md).
 
 ## Example Usage
 
@@ -153,7 +153,7 @@ This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The 
 string sid = "Sid8";
 try
 {
-    ApiResponse<AccountsV1CredentialCredentialPublicKey> result = await accountsV1PublicKeyApi.FetchCredentialPublicKeyAsync(sid);
+    ApiResponse<CredentialPublicKey> result = await accountsV1PublicKeyApi.FetchCredentialPublicKeyAsync(sid);
 }
 catch (ApiException e)
 {
@@ -194,7 +194,7 @@ UpdateCredentialPublicKeyAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1CredentialCredentialPublicKey](../../doc/models/accounts-v1-credential-credential-public-key.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.CredentialPublicKey](../../doc/models/credential-public-key.md).
 
 ## Example Usage
 
@@ -203,7 +203,7 @@ string sid = "Sid8";
 string friendlyName = "friendly_name";
 try
 {
-    ApiResponse<AccountsV1CredentialCredentialPublicKey> result = await accountsV1PublicKeyApi.UpdateCredentialPublicKeyAsync(
+    ApiResponse<CredentialPublicKey> result = await accountsV1PublicKeyApi.UpdateCredentialPublicKeyAsync(
         sid,
         friendlyName
     );

@@ -92,7 +92,7 @@ CreateCredentialAwsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1CredentialCredentialAws](../../doc/models/accounts-v1-credential-credential-aws.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.CredentialAws](../../doc/models/credential-aws.md).
 
 ## Example Usage
 
@@ -102,7 +102,7 @@ string friendlyName = "friendly_name";
 string accountSid = "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 try
 {
-    ApiResponse<AccountsV1CredentialCredentialAws> result = await accountsV1AwsApi.CreateCredentialAwsAsync(
+    ApiResponse<CredentialAws> result = await accountsV1AwsApi.CreateCredentialAwsAsync(
         credentials,
         friendlyName,
         accountSid
@@ -145,7 +145,7 @@ FetchCredentialAwsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1CredentialCredentialAws](../../doc/models/accounts-v1-credential-credential-aws.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.CredentialAws](../../doc/models/credential-aws.md).
 
 ## Example Usage
 
@@ -153,7 +153,7 @@ This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The 
 string sid = "Sid8";
 try
 {
-    ApiResponse<AccountsV1CredentialCredentialAws> result = await accountsV1AwsApi.FetchCredentialAwsAsync(sid);
+    ApiResponse<CredentialAws> result = await accountsV1AwsApi.FetchCredentialAwsAsync(sid);
 }
 catch (ApiException e)
 {
@@ -194,7 +194,7 @@ UpdateCredentialAwsAsync(
 
 ## Response Type
 
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.AccountsV1CredentialCredentialAws](../../doc/models/accounts-v1-credential-credential-aws.md).
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance. The `Data` property of this instance returns the response data which is of type [Models.CredentialAws](../../doc/models/credential-aws.md).
 
 ## Example Usage
 
@@ -203,7 +203,7 @@ string sid = "Sid8";
 string friendlyName = "friendly_name";
 try
 {
-    ApiResponse<AccountsV1CredentialCredentialAws> result = await accountsV1AwsApi.UpdateCredentialAwsAsync(
+    ApiResponse<CredentialAws> result = await accountsV1AwsApi.UpdateCredentialAwsAsync(
         sid,
         friendlyName
     );

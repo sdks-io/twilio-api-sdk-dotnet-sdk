@@ -16,9 +16,9 @@ The following code sample demonstrates how to initialize the SDK client using an
 The `Builder.FromConfiguration` method reads values from the provided configuration section and returns a builder instance, allowing you to override specific properties directly in code if needed before building the final client.
 
 ```csharp
-using TwilioAccounts.Standard;
+using TwilioApIs.Standard;
 using Microsoft.Extensions.Configuration;
-using Environment = TwilioAccounts.Standard.Environment;
+using Environment = TwilioApIs.Standard.Environment;
 
 namespace ConsoleApp;
 
@@ -29,8 +29,8 @@ var configuration = new ConfigurationBuilder()
     .Build();
 
 // Instantiate your SDK builder and configure it from IConfiguration with overrides
-var client = TwilioAccountsClient.Builder
-    .FromConfiguration(configuration.GetSection("TwilioAccounts"))
+var client = TwilioApIsClient.Builder
+    .FromConfiguration(configuration.GetSection("TwilioApIs"))
     .Environment(Environment.Production)
     .HttpClientConfig(c => c.Timeout(TimeSpan.FromSeconds(60)))
     .Build();
@@ -40,7 +40,7 @@ var client = TwilioAccountsClient.Builder
 
 ```csharp
 {
-  "TwilioAccounts": {
+  "TwilioApIs": {
     "Environment": "production",
     "BasicAuthCredentials": {
       "Username": "username",
