@@ -127,6 +127,7 @@ The gateway for the SDK. This class acts as a factory for the Apis and also hold
 | VerifyV2ServiceApi | Gets VerifyV2ServiceApi. |
 | VerifyV2VerificationApi | Gets VerifyV2VerificationApi. |
 | VerifyV2VerificationCheckApi | Gets VerifyV2VerificationCheckApi. |
+| SmsApi | Gets SmsApi. |
 
 ### Properties
 

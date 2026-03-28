@@ -36,13 +36,14 @@ namespace TwilioApIs.Standard
                     { Server.Default3, "https://notify.twilio.com" },
                     { Server.Default4, "https://taskrouter.twilio.com" },
                     { Server.Default5, "https://verify.twilio.com" },
+                    { Server.Default6, "https://api.twilio.com" },
                 }
             },
         };
 
         private readonly GlobalConfiguration globalConfiguration;
         private SdkLoggingConfiguration sdkLoggingConfiguration;
-        private const string userAgent = "DotNet-SDK/1.0.8 (OS: {os-info}, Engine: {engine}/{engine-version})";
+        private const string userAgent = "DotNet-SDK/1.0.9 (OS: {os-info}, Engine: {engine}/{engine-version})";
         private readonly HttpCallback httpCallback;
         private readonly Lazy<AccountsV1AuthTokenPromotionApi> accountsV1AuthTokenPromotion;
         private readonly Lazy<AccountsV1AwsApi> accountsV1Aws;
@@ -102,6 +103,7 @@ namespace TwilioApIs.Standard
         private readonly Lazy<VerifyV2ServiceApi> verifyV2Service;
         private readonly Lazy<VerifyV2VerificationApi> verifyV2Verification;
         private readonly Lazy<VerifyV2VerificationCheckApi> verifyV2VerificationCheck;
+        private readonly Lazy<SmsApi> sms;
 
         private TwilioApIsClient(
             Environment environment,
@@ -244,6 +246,8 @@ namespace TwilioApIs.Standard
                 () => new VerifyV2VerificationApi(globalConfiguration));
             this.verifyV2VerificationCheck = new Lazy<VerifyV2VerificationCheckApi>(
                 () => new VerifyV2VerificationCheckApi(globalConfiguration));
+            this.sms = new Lazy<SmsApi>(
+                () => new SmsApi(globalConfiguration));
         }
 
         /// <summary>
@@ -535,6 +539,11 @@ namespace TwilioApIs.Standard
         /// Gets VerifyV2VerificationCheckApi.
         /// </summary>
         public VerifyV2VerificationCheckApi VerifyV2VerificationCheckApi => this.verifyV2VerificationCheck.Value;
+
+        /// <summary>
+        /// Gets SmsApi.
+        /// </summary>
+        public SmsApi SmsApi => this.sms.Value;
 
         /// <summary>
         /// Gets the configuration of the Http Client associated with this client.

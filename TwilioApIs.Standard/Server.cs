@@ -40,5 +40,10 @@ namespace TwilioApIs.Standard
         /// Default5.
         /// </summary>
         Default5,
+
+        /// <summary>
+        /// Default6.
+        /// </summary>
+        Default6,
     }
 }

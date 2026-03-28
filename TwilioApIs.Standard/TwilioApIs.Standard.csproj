@@ -9,13 +9,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>apimatic-twilio-sdk</AssemblyName>
-    <Version>1.0.8.0</Version>
+    <Version>1.0.9.0</Version>
     <Authors>Muhammad Rafay</Authors>
     <Owners>Twilio Support</Owners>
      <Product>TwilioApIs.Standard</Product>
     <Copyright>Copyright ©  2019</Copyright>
-    <AssemblyVersion>1.0.8.0</AssemblyVersion>
-    <FileVersion>1.0.8.0</FileVersion>
+    <AssemblyVersion>1.0.9.0</AssemblyVersion>
+    <FileVersion>1.0.9.0</FileVersion>
     <Description>twilio api sdk</Description>
     <LangVersion>7.3</LangVersion>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
